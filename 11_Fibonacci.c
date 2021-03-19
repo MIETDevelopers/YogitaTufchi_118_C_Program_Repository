@@ -1,6 +1,6 @@
 //Yogita Tufchi
-/Fibonacci series using for loop
-#include<stdio.h>  // //Pre-process directive to include standard input and output functions header file 
+//Fibonacci series using for loop
+#include<stdio.h>     //Pre-process directive to include standard input and output functions header file 
 
 int main()   //Main function 
 {    

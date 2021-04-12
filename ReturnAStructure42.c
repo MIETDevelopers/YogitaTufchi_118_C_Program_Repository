@@ -1,37 +1,27 @@
-/*Name : Yogita Tufchi,
-Function implementation which return a structure*/
-
-#include <stdio.h>  //Pre-process directive to include standard input and output functions header file
+#include <stdio.h>  //Pre-processor directive to include standard input and output functions header file
 struct student
 {
     char name[50];
     int age;
 };
-
-// function prototype
-struct student getInformation();
-
-int main()
-{
+//Function prototype
+struct student getInfo();
+int main(){  //Main function
     struct student s;
+    s = getInfo();
+    //Printf function calling
+    printf("\nName: %s", s.name);   //For printing name
+    printf("\nAge: %d", s.age);  //For printing age
+    return 0;   //Return function
+    }
+struct student getInfo(){
+    struct student s1;
 
-    s = getInformation();
+    printf("Enter name: ");
+    scanf ("%[^\n]%*c", s1.name);  //For reading name
 
-    printf("\nDisplaying information\n"); //Printf function calling
-    printf("Name: %s", s.name);
-    printf("\nRoll: %d", s.age);
-   
-    return 0;
-}
-struct student getInformation()
-{
-  struct student s1;
+    printf("\nEnter age: ");
+    scanf("%d", &s1.age);  //For reading age
 
-  printf("Enter name: ");
-  scanf ("%[^\n]%*c", s1.name);
-
-  printf("Enter age: ");
-  scanf("%d", &s1.age);
- 
-  return s1;
+    return s1;  //Return function
 }
